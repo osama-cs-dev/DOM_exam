@@ -134,23 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Function to handle active section highlighting
-    function setActiveSection() {
-        sections.forEach((section) => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top <= 150 && rect.bottom >= 150) {
-                sections.forEach(s => s.classList.remove('your-active-class'));
-                section.classList.add('your-active-class');
-                
-                const links = document.querySelectorAll('.menu__link');
-                links.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${section.id}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
+  
     
     // Create navbar on page load
     createNavbar();
